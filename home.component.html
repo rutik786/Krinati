@@ -1,0 +1,48 @@
+ 
+  <div class="container">
+    <h1 class="form-title">Experience</h1>
+    <form #data="ngForm" (ngSubmit)="submit(data.value)">
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label for="fullName">Company</label>
+          <input type="text"
+          [(ngModel)]="fullName"   
+                  id="fullName"
+                  #company
+                  name="fullName"
+                  placeholder="Enter Company Name"/>
+        </div>
+       <div class="user-input-box">
+          <label for="tile">Title</label>
+          <input type="text"
+          [(ngModel)]="title" 
+          #titleName    
+                  id="title"
+                  name="title"
+                  placeholder="Enter Title"/>
+        </div>
+        <div class="user-input-box">
+          <label for="start">Start Date</label>
+          <input type="date"
+          [(ngModel)]="start"   
+          #startDate
+                  id="start"
+                  name="start"
+                  placeholder="Enter Start Date"/>
+        </div>
+        <div class="user-input-box">
+          <label for="end">End Date</label>
+          <input type="date"
+          [(ngModel)]="end"  
+          #endDate
+                  id="end"
+                  name="end"
+                  placeholder="Enter End Date"/>
+        </div>
+
+      </div>
+      <div class="form-submit-btn">
+        <input type="submit" (click)="send()" >
+      </div>
+    </form>
+  </div>

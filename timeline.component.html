@@ -1,0 +1,14 @@
+<h2 class=" text-center mt-5">Experience</h2>
+<br>
+<div class="card">
+	<div class="card-body" *ngFor="let expo of experience; let last = last">
+		<h3 class="card-title">{{ expo.company | titlecase }}</h3>
+		<h5 class="card-title">{{ expo.company | titlecase }}</h5>
+		<p class="card-text">{{ expo.startDate | date: " MMMM y"}} -  {{ expo.endDate | date: "MMMM y"}}</p>
+
+	</div>
+</div> 
+<!-- <ng-template #end>
+            <p>{{ expo.endDate }}</p>
+        </ng-template>
+        <hr *ngIf="!last" /> -->
